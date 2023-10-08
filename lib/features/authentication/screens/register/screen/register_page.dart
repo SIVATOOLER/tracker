@@ -67,12 +67,12 @@ class _RegisterpageState extends State<Registerpage> {
         title: const Text(AppString.appName),
       ),
       body: SingleChildScrollView(
+        // physics: NeverScrollableScrollPhysics(),
         child: SizedBox(
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height * 0.9,
           child: Padding(
-            padding: EdgeInsets.fromLTRB(
-                15, 15, 15, MediaQuery.of(context).viewInsets.bottom),
+            padding: AppLayout.screenPadding,
             child: Form(
               key: formKey,
               child: Column(
