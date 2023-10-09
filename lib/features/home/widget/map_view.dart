@@ -89,7 +89,7 @@ class _MapViewState extends State<MapView> {
     setState(() {
       userId = SharedPrefs.getUserToken ?? "";
       // ignore: unused_local_variable
-      Timer mytimer = Timer.periodic(const Duration(minutes: 5), (timer) async {
+      Timer mytimer = Timer.periodic(const Duration(seconds: 5), (timer) async {
         Position position = await Geolocator.getCurrentPosition(
             desiredAccuracy: LocationAccuracy.high);
         double lat = position.latitude;
